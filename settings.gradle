@@ -1,0 +1,6 @@
+
+rootProject.name = "ScreenshotApp"
+
+include ':screenshoot'
+include ':app'
+

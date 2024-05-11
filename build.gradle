@@ -1,0 +1,49 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    apply from: 'https://raw.githubusercontent.com/hss01248/flipperUtil/gradle7_5/remote3.gradle'
+    apply from: 'https://raw.githubusercontent.com/hss01248/flipperUtil/gradle7_5/deps/depsLastestChecker.gradle'
+    apply from: 'https://raw.githubusercontent.com/hss01248/flipperUtil/gradle7_5/z_config/git_branch_info.gradle'
+    apply from: "app/configs/componentized.gradle"
+    apply from: "app/configs/apk_shrink.gradle"
+    //apply from: 'https://raw.githubusercontent.com/skyNet2017/AppUpdate/master/uploadToPyger.gradle'
+    ext.kotlin_version = '1.6.10'
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:7.1.2"
+        classpath 'com.tencent.mm:AndResGuard-gradle-plugin:1.2.21'
+        classpath "com.tencent.bugly:symtabfileuploader:2.2.1"
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.3.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+allprojects {
+    repositories {
+        maven { url 'https://github.com/link-u/AndroidGlideAvifDecoder/raw/master/repository' }
+
+        maven { url 'https://nexus.hss01248.tech/repository/maven-releases/' }
+        mavenLocal()
+        //maven { url 'https://cdn.jsdelivr.net/gh/link-u/AndroidGlideAvifDecoder@master/repository' }
+    }
+
+   // maven {
+   //     allowInsecureProtocol = true
+   //     url 'http://39.101.221.145:8081/repository/jitpack_proxy/'
+   // }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+def isNoop(){
+    for (String s : gradle.startParameter.taskNames) {
+        if (s.contains("ebug") | s.contains("ommon") | s.contains("racere")) {
+            return false
+        }else if (s.contains("ultiChannel") | s.contains("elease")) {
+            return true
+        }
+    }
+    return null
+}

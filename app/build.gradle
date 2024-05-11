@@ -1,0 +1,59 @@
+plugins {
+    id 'com.android.application'
+}
+apply from: "configs/andresguard.gradle"
+android {
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.hss01248.screenshotapp"
+        minSdk 23
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    viewBinding {
+        enabled = true
+    }
+    signingConfigs {
+        debug {
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    packagingOptions {
+        pickFirst '**/libc++_shared.so'
+        pickFirst '**/META-INF/DEPENDENCIES'
+    }
+}
+
+dependencies {
+
+    api 'com.github.hss01248.utilcodeEnhance:crash:1.4.7'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.0'
+    testImplementation 'junit:junit:4.14-SNAPSHOT'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation project(path: ':screenshoot')
+}
+
+configurations {
+    all*.exclude group: 'com.github.simplepeng.SpiderMan', module: 'spiderman'
+    all {
+        resolutionStrategy {
+            force "androidx.appcompat:appcompat:1.2.0"
+        }
+    }
+}
