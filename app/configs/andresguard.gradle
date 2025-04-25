@@ -7,7 +7,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.tencent.mm:AndResGuard-gradle-plugin:1.2.21'
-        classpath "com.bytedance.android:aabresguard-plugin:0.1.4"
+        //classpath "com.bytedance.android:aabresguard-plugin:0.1.4"
     }
 }
 apply plugin: 'AndResGuard'
