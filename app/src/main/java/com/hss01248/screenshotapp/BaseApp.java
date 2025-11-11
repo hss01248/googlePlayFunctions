@@ -3,8 +3,7 @@ package com.hss01248.screenshotapp;
 import androidx.multidex.MultiDexApplication;
 
 import com.blankj.utilcode.util.ThreadUtils;
-import com.hss01248.glidev4.Glide4Loader;
-import com.hss01248.image.ImageLoader;
+
 
 /**
  * @Despciption todo
@@ -17,7 +16,7 @@ public class BaseApp extends MultiDexApplication {
     @Override
     public void onCreate() {
         super.onCreate();
-        ImageLoader.init(this,250,new Glide4Loader());
+
 
         //crash();
     }

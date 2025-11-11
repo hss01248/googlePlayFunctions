@@ -1,7 +1,7 @@
 plugins {
     id 'com.android.application'
 }
-apply from: "configs/andresguard.gradle"
+//apply from: "configs/andresguard.gradle"
 android {
     compileSdk 34
 
@@ -40,12 +40,12 @@ android {
 
 dependencies {
 
-    api 'com.github.hss01248.utilcodeEnhance:crash:1.4.7'
+    api 'com.github.hss01248.utilcodeEnhance:crash:1.6.0'
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.0'
-    testImplementation 'junit:junit:4.14-SNAPSHOT'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    //testImplementation 'junit:junit:4.14-SNAPSHOT'
+    //androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    //androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     implementation project(path: ':screenshoot')
 }
 
