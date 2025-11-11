@@ -1,4 +1,4 @@
-package com.hss01248.screenshoot;
+package com.hss01248.googleplay;
 
 import android.app.Application;
 import android.content.Context;

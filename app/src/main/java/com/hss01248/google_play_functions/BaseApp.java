@@ -1,4 +1,4 @@
-package com.hss01248.screenshotapp;
+package com.hss01248.google_play_functions;
 
 import androidx.multidex.MultiDexApplication;
 

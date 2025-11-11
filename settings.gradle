@@ -1,6 +1,6 @@
 
-rootProject.name = "ScreenshotApp"
+rootProject.name = "googlePlayFunctions"
 
-include ':screenshoot'
+include ':googleplay'
 include ':app'
 

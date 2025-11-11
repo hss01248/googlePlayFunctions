@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.hss01248.screenshoot">
+    package="com.hss01248.googleplay">
 
     <application>
         <provider
@@ -11,7 +11,7 @@
             tools:node="merge">
             <meta-data
                 tools:node="merge"
-                android:name="com.hss01248.screenshoot.CrashInit"
+                android:name="com.hss01248.googleplay.CrashInit"
                 android:value="androidx.startup" />
         </provider>
     </application>
