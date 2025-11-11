@@ -35,5 +35,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     api 'com.github.hss01248.utilcodeEnhance:lib-base-base:1.6.0'
     api 'com.github.hss01248.MyPermission:ext:2.3.9'
+    //核心库
+    //implementation 'com.google.android.play:core:2.0.0'
+    implementation 'com.google.android.play:app-update:2.1.0'
 
 }
