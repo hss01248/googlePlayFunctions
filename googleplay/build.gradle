@@ -38,5 +38,6 @@ dependencies {
     //核心库
     //implementation 'com.google.android.play:core:2.0.0'
     implementation 'com.google.android.play:app-update:2.1.0'
+    //api 'com.github.hss01248.StartActivityResult:activityresult2:2.0.2'
 
 }

@@ -6,7 +6,8 @@ android {
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.hss01248.google_play_functions"
+        //applicationId "com.hss01248.google_play_functions"
+        applicationId "com.google.android.apps.subscriptions.red"
         minSdk 23
         targetSdk 34
         versionCode 1
@@ -19,11 +20,22 @@ android {
     }
     signingConfigs {
         debug {
+
+        }
+        release {
+            storeFile file(RELEASE_STORE_FILE)
+            storePassword RELEASE_STORE_PASSWORD
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
         }
     }
 
     buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+        }
         release {
+            signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }

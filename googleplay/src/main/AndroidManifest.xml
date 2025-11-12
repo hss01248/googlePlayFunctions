@@ -14,5 +14,9 @@
                 android:name="com.hss01248.googleplay.CrashInit"
                 android:value="androidx.startup" />
         </provider>
+        <activity android:name=".TransActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:theme="@style/TransparentTheme2"/>
     </application>
 </manifest>
