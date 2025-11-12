@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void checkUpdate(View view) {
-        GooglePlayUpdater.checkUpdate();
+        GooglePlayUpdater.checkUpdate(true);
 
     }
 }
